@@ -1,0 +1,61 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/lmaoBOT.csproj",
+    "projectName": "lmaoBOT",
+    "projectPath": "/Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/lmaoBOT.csproj",
+    "outputPath": "/Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {},
+      "https://nuget.emzi0767.com/api/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "DSharpPlus": {
+          "target": "Package",
+          "version": "[4.0.0-nightly-00656, )"
+        },
+        "DSharpPlus.CommandsNext": {
+          "target": "Package",
+          "version": "[4.0.0-nightly-00656, )"
+        },
+        "DSharpPlus.Interactivity": {
+          "target": "Package",
+          "version": "[4.0.0-nightly-00656, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+    }
+  }
+}
