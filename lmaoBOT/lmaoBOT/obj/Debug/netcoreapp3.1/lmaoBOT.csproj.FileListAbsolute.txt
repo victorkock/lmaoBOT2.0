@@ -16,3 +16,4 @@
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/obj/Debug/netcoreapp3.1/lmaoBOT.pdb
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/LiteDB.dll

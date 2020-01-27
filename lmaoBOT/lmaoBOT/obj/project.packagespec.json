@@ -38,6 +38,10 @@
         "DSharpPlus.Interactivity": {
           "target": "Package",
           "version": "[4.0.0-nightly-00656, )"
+        },
+        "LiteDB": {
+          "target": "Package",
+          "version": "[5.0.0-rc, )"
         }
       },
       "imports": [

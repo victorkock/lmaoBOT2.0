@@ -44,6 +44,15 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         }
       },
+      "LiteDB/5.0.0-rc": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -1210,6 +1219,25 @@
         "lib/netstandard1.3/DSharpPlus.Interactivity.xml",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
+      ]
+    },
+    "LiteDB/5.0.0-rc": {
+      "sha512": "sDLs2AogmN3sDdVU+96kf1zAK+r/QH5WcKmFjtSwFHl9bBaulEfnO8f/XeVRDp3biSBxbyfdiwz/2IK7aj5f8Q==",
+      "type": "package",
+      "path": "litedb/5.0.0-rc",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.0-rc.nupkg.sha512",
+        "litedb.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/3.1.1": {
@@ -4028,7 +4056,8 @@
     ".NETCoreApp,Version=v3.1": [
       "DSharpPlus >= 4.0.0-nightly-00656",
       "DSharpPlus.CommandsNext >= 4.0.0-nightly-00656",
-      "DSharpPlus.Interactivity >= 4.0.0-nightly-00656"
+      "DSharpPlus.Interactivity >= 4.0.0-nightly-00656",
+      "LiteDB >= 5.0.0-rc"
     ]
   },
   "packageFolders": {
@@ -4078,6 +4107,10 @@
           "DSharpPlus.Interactivity": {
             "target": "Package",
             "version": "[4.0.0-nightly-00656, )"
+          },
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.0-rc, )"
           }
         },
         "imports": [

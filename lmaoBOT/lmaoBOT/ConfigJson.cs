@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace lmaoBOT
 {
-    public struct ConfigJSON
+    public struct ConfigJson
     {
         [JsonProperty("token")]
         public string Token { get; private set; }

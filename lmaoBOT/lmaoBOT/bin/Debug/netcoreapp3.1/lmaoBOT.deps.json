@@ -10,7 +10,8 @@
         "dependencies": {
           "DSharpPlus": "4.0.0-nightly-00656",
           "DSharpPlus.CommandsNext": "4.0.0-nightly-00656",
-          "DSharpPlus.Interactivity": "4.0.0-nightly-00656"
+          "DSharpPlus.Interactivity": "4.0.0-nightly-00656",
+          "LiteDB": "5.0.0-rc"
         },
         "runtime": {
           "lmaoBOT.dll": {}
@@ -52,6 +53,14 @@
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {
             "assemblyVersion": "4.0.0.656",
             "fileVersion": "4.0.0.656"
+          }
+        }
+      },
+      "LiteDB/5.0.0-rc": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
           }
         }
       },
@@ -696,6 +705,13 @@
       "sha512": "sha512-1kaaHgKxd4/VNKuYSDkPCBzDRw4TWwfXIWKgDUQ5bFb+lQKXKHP+nh/kNAxK2Hn0edATfStc0/G2OLZVYzDLZA==",
       "path": "dsharpplus.interactivity/4.0.0-nightly-00656",
       "hashPath": "dsharpplus.interactivity.4.0.0-nightly-00656.nupkg.sha512"
+    },
+    "LiteDB/5.0.0-rc": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sDLs2AogmN3sDdVU+96kf1zAK+r/QH5WcKmFjtSwFHl9bBaulEfnO8f/XeVRDp3biSBxbyfdiwz/2IK7aj5f8Q==",
+      "path": "litedb/5.0.0-rc",
+      "hashPath": "litedb.5.0.0-rc.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/3.1.1": {
       "type": "package",

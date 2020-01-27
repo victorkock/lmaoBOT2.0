@@ -1,9 +1,12 @@
+using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using DSharpPlus;    
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
+using DSharpPlus.Interactivity;
+using lmaoBOT.Commands;
 using Newtonsoft.Json;
 
 namespace lmaoBOT
@@ -14,6 +17,8 @@ namespace lmaoBOT
 
         public CommandsNextExtension Commands { get; private set;}
         
+        public InteractivityExtension InteractivityExtension { get; private set; }
+        
         public async Task RunAsync()
         {
             var json = string.Empty;
@@ -23,7 +28,7 @@ namespace lmaoBOT
                 json = await sr.ReadToEndAsync().ConfigureAwait(false);
 
 
-            var configJson = JsonConvert.DeserializeObject<ConfigJSON>(json);
+            var configJson = JsonConvert.DeserializeObject<ConfigJson>(json);
 
             var config = new DiscordConfiguration
             {
@@ -39,15 +44,25 @@ namespace lmaoBOT
 
             Client.Ready += OnClientReady;
 
+            Client.UseInteractivity(new InteractivityConfiguration
+            {
+                Timeout = TimeSpan.FromMinutes(5)
+            });
+
             
             var commandsConfig = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] {configJson.Prefix},
                 EnableDms = false,
-                EnableMentionPrefix = true
+                EnableMentionPrefix = true,
+                DmHelp = true
             };
             
+            
+            
             Commands = Client.UseCommandsNext(commandsConfig);
+
+            Commands.RegisterCommands<Commands.Commands>();
 
             await Client.ConnectAsync();
 
