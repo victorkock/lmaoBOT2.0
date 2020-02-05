@@ -1,13 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
+using DSharpPlus.VoiceNext;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,26 +18,8 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace lmaoBOT.Commands
 {
-    public class Commands : BaseCommandModule
+    public class VoiceCommands : BaseCommandModule
     {
-        [Command("ping")]
-        [Description("Returns pong")]
-        public async Task Pong(CommandContext ctx)
-        {
-            await ctx.Channel.SendMessageAsync("Pong").ConfigureAwait(false);
-        }
-
-        [Command("roll")]
-        [Description("Returns random number between 0 and the range number")]
-        public async Task Roll(CommandContext ctx, int range)
-        {
-            var rand = new Random().Next(0, range + 1);
-
-            await ctx.Channel
-                .SendMessageAsync(rand + "")
-                .ConfigureAwait(false);
-        }
-
         [Command("addSong")]
         [Description("Adds a song to the users personal playlist")]
         //[RequireRoles(RoleCheckMode.SpecifiedOnly, "DJ")]
@@ -128,17 +113,35 @@ namespace lmaoBOT.Commands
                 .ConfigureAwait(false);
 
             playlistJson.Songs.ToList().ForEach(i => ctx.Channel
-                .SendMessageAsync(i)
+                .SendMessageAsync("!play "+ i)
                 .ConfigureAwait(false));
         }
-
-        [Command("csgo")]
-        [Description("Moves everyone in the channel to the CSGO channel")]
-        public async Task CSGO(CommandContext ctx)
+        
+        [Command("join")]
+        public async Task Join(CommandContext ctx)
         {
+            var vnext = ctx.Client.GetVoiceNext();
+
+            var chn = ctx.Member?.VoiceState?.Channel;
+            if (chn == null)
+                throw new InvalidOperationException("You need to be in a voice channel.");
+
+            await ctx.RespondAsync($"Connected to `{chn.Name}`").ConfigureAwait(false);
+            await vnext.ConnectAsync(chn);
+        }
+
+
+        [Command("leave")]
+        public async Task Leave(CommandContext ctx)
+        {
+            var vnext = ctx.Client.GetVoiceNext();
+
+            var chn = ctx.Member?.VoiceState?.Channel;
+            if (chn == null)
+                throw new InvalidOperationException("You need to be in a voice channel.");
+            
+            await ctx.RespondAsync($"Disconnected from `{chn.Name}`").ConfigureAwait(false);
+            vnext.GetConnection(chn.Guild).Disconnect();
         }
     }
 }
-    
-
-    

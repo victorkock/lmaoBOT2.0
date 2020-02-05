@@ -6,8 +6,8 @@ using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
-using lmaoBOT.Commands;
 using Newtonsoft.Json;
+using DSharpPlus.VoiceNext;
 
 namespace lmaoBOT
 {
@@ -18,6 +18,8 @@ namespace lmaoBOT
         public CommandsNextExtension Commands { get; private set;}
         
         public InteractivityExtension InteractivityExtension { get; private set; }
+        
+        public VoiceNextExtension Voice { get; set; }
         
         public async Task RunAsync()
         {
@@ -36,33 +38,36 @@ namespace lmaoBOT
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 LogLevel = LogLevel.Debug,
-                UseInternalLogHandler = true
-                
+                UseInternalLogHandler = true,
             };
             
             Client = new DiscordClient(config);
-
+            
             Client.Ready += OnClientReady;
 
             Client.UseInteractivity(new InteractivityConfiguration
             {
-                Timeout = TimeSpan.FromMinutes(5)
+                Timeout = TimeSpan.FromMinutes(10)
             });
 
-            
+
             var commandsConfig = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] {configJson.Prefix},
                 EnableDms = false,
                 EnableMentionPrefix = true,
-                DmHelp = true
+                DmHelp = false,
             };
             
-            
+            var voiceConfig = new VoiceNextConfiguration();
+
+            Voice = Client.UseVoiceNext(voiceConfig);
             
             Commands = Client.UseCommandsNext(commandsConfig);
 
-            Commands.RegisterCommands<Commands.Commands>();
+            Commands.RegisterCommands<Commands.FunCommands>();
+            Commands.RegisterCommands<Commands.StatCommands>();
+            Commands.RegisterCommands<Commands.VoiceCommands>();
 
             await Client.ConnectAsync();
 

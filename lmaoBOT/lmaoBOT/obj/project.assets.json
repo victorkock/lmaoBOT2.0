@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "DSharpPlus/4.0.0-nightly-00656": {
+      "DSharpPlus/4.0.0-nightly-00657": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
@@ -19,10 +19,10 @@
           "lib/netstandard2.0/DSharpPlus.dll": {}
         }
       },
-      "DSharpPlus.CommandsNext/4.0.0-nightly-00656": {
+      "DSharpPlus.CommandsNext/4.0.0-nightly-00657": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00656",
+          "DSharpPlus": "4.0.0-nightly-00657",
           "Microsoft.Extensions.DependencyInjection": "3.1.1"
         },
         "compile": {
@@ -32,16 +32,28 @@
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
         }
       },
-      "DSharpPlus.Interactivity/4.0.0-nightly-00656": {
+      "DSharpPlus.Interactivity/4.0.0-nightly-00657": {
         "type": "package",
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00656"
+          "DSharpPlus": "4.0.0-nightly-00657"
         },
         "compile": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
+        }
+      },
+      "DSharpPlus.VoiceNext/4.0.0-nightly-00657": {
+        "type": "package",
+        "dependencies": {
+          "DSharpPlus": "4.0.0-nightly-00657"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {}
         }
       },
       "LiteDB/5.0.0-rc": {
@@ -1179,13 +1191,13 @@
     }
   },
   "libraries": {
-    "DSharpPlus/4.0.0-nightly-00656": {
-      "sha512": "rXLnbPLfOY/kCB1wSlCaDe7fYEEti/85x/NSqlgssZu/B81ssq5xJXPEbFGj09OMsapQqH7SWjnVQ5IISjF5Xw==",
+    "DSharpPlus/4.0.0-nightly-00657": {
+      "sha512": "75pqCSLZWpzlijYyG1baSrnuHDFfAY3ov+/P8uOXUkKgy1AyTyk04GB52DX+Tbfq/ggC/4urpcV6Gk6vqyucTQ==",
       "type": "package",
-      "path": "dsharpplus/4.0.0-nightly-00656",
+      "path": "dsharpplus/4.0.0-nightly-00657",
       "files": [
         ".nupkg.metadata",
-        "dsharpplus.4.0.0-nightly-00656.nupkg.sha512",
+        "dsharpplus.4.0.0-nightly-00657.nupkg.sha512",
         "dsharpplus.nuspec",
         "lib/netstandard1.3/DSharpPlus.dll",
         "lib/netstandard1.3/DSharpPlus.xml",
@@ -1193,13 +1205,13 @@
         "lib/netstandard2.0/DSharpPlus.xml"
       ]
     },
-    "DSharpPlus.CommandsNext/4.0.0-nightly-00656": {
-      "sha512": "0f1twP6IoSUs6ip3I3p9VuodAzaxfLW0obOiy/LROj1bEzcAnVUPuWRJdyayEMrwmWgFAOe+jiDwyTZj4q2PPg==",
+    "DSharpPlus.CommandsNext/4.0.0-nightly-00657": {
+      "sha512": "0YrJioDUVFBnLEKIo9cy5pIZGPkFYbnNxOVTZX+1RVd3bhjjozihyfrn0N5/r0Q83KkXS9qCyjF/nWaThP4gvg==",
       "type": "package",
-      "path": "dsharpplus.commandsnext/4.0.0-nightly-00656",
+      "path": "dsharpplus.commandsnext/4.0.0-nightly-00657",
       "files": [
         ".nupkg.metadata",
-        "dsharpplus.commandsnext.4.0.0-nightly-00656.nupkg.sha512",
+        "dsharpplus.commandsnext.4.0.0-nightly-00657.nupkg.sha512",
         "dsharpplus.commandsnext.nuspec",
         "lib/netstandard1.3/DSharpPlus.CommandsNext.dll",
         "lib/netstandard1.3/DSharpPlus.CommandsNext.xml",
@@ -1207,18 +1219,32 @@
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
       ]
     },
-    "DSharpPlus.Interactivity/4.0.0-nightly-00656": {
-      "sha512": "1kaaHgKxd4/VNKuYSDkPCBzDRw4TWwfXIWKgDUQ5bFb+lQKXKHP+nh/kNAxK2Hn0edATfStc0/G2OLZVYzDLZA==",
+    "DSharpPlus.Interactivity/4.0.0-nightly-00657": {
+      "sha512": "r9xlDjsS104wiJhUEQn0aUQ9hrxivHNZPuvv8GoM02ecA8UJUCyyOXPQtLTjcanvZ5x3H5fhAl6OcX1XsCQ0Ww==",
       "type": "package",
-      "path": "dsharpplus.interactivity/4.0.0-nightly-00656",
+      "path": "dsharpplus.interactivity/4.0.0-nightly-00657",
       "files": [
         ".nupkg.metadata",
-        "dsharpplus.interactivity.4.0.0-nightly-00656.nupkg.sha512",
+        "dsharpplus.interactivity.4.0.0-nightly-00657.nupkg.sha512",
         "dsharpplus.interactivity.nuspec",
         "lib/netstandard1.3/DSharpPlus.Interactivity.dll",
         "lib/netstandard1.3/DSharpPlus.Interactivity.xml",
         "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
         "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
+      ]
+    },
+    "DSharpPlus.VoiceNext/4.0.0-nightly-00657": {
+      "sha512": "s+AJGpSxAeBB2Pi0Urg/3B4FZPSpYBgUGrOB0ccvcSNjSeTAZBPxy4F8jNVKkOZbIcoHlrGDjcqen1n1Gy42ew==",
+      "type": "package",
+      "path": "dsharpplus.voicenext/4.0.0-nightly-00657",
+      "files": [
+        ".nupkg.metadata",
+        "dsharpplus.voicenext.4.0.0-nightly-00657.nupkg.sha512",
+        "dsharpplus.voicenext.nuspec",
+        "lib/netstandard1.3/DSharpPlus.VoiceNext.dll",
+        "lib/netstandard1.3/DSharpPlus.VoiceNext.xml",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
       ]
     },
     "LiteDB/5.0.0-rc": {
@@ -4054,9 +4080,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.0.0-nightly-00656",
-      "DSharpPlus.CommandsNext >= 4.0.0-nightly-00656",
-      "DSharpPlus.Interactivity >= 4.0.0-nightly-00656",
+      "DSharpPlus >= 4.0.0-nightly-00657",
+      "DSharpPlus.CommandsNext >= 4.0.0-nightly-00657",
+      "DSharpPlus.Interactivity >= 4.0.0-nightly-00657",
+      "DSharpPlus.VoiceNext >= 4.0.0-nightly-00657",
       "LiteDB >= 5.0.0-rc"
     ]
   },
@@ -4098,15 +4125,19 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.0.0-nightly-00656, )"
+            "version": "[4.0.0-nightly-00657, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",
-            "version": "[4.0.0-nightly-00656, )"
+            "version": "[4.0.0-nightly-00657, )"
           },
           "DSharpPlus.Interactivity": {
             "target": "Package",
-            "version": "[4.0.0-nightly-00656, )"
+            "version": "[4.0.0-nightly-00657, )"
+          },
+          "DSharpPlus.VoiceNext": {
+            "target": "Package",
+            "version": "[4.0.0-nightly-00657, )"
           },
           "LiteDB": {
             "target": "Package",

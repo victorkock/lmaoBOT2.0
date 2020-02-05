@@ -6,7 +6,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Bot.cs" t="Include" />
         <e p="Commands" t="Include">
-          <e p="Commands.cs" t="Include" />
+          <e p="FunCommands.cs" t="Include" />
+          <e p="StatCommands.cs" t="Include" />
+          <e p="VoiceCommands.cs" t="Include" />
         </e>
         <e p="config.json" t="Include" />
         <e p="ConfigJSON.cs" t="Include" />

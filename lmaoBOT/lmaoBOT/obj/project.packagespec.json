@@ -29,15 +29,19 @@
       "dependencies": {
         "DSharpPlus": {
           "target": "Package",
-          "version": "[4.0.0-nightly-00656, )"
+          "version": "[4.0.0-nightly-00657, )"
         },
         "DSharpPlus.CommandsNext": {
           "target": "Package",
-          "version": "[4.0.0-nightly-00656, )"
+          "version": "[4.0.0-nightly-00657, )"
         },
         "DSharpPlus.Interactivity": {
           "target": "Package",
-          "version": "[4.0.0-nightly-00656, )"
+          "version": "[4.0.0-nightly-00657, )"
+        },
+        "DSharpPlus.VoiceNext": {
+          "target": "Package",
+          "version": "[4.0.0-nightly-00657, )"
         },
         "LiteDB": {
           "target": "Package",

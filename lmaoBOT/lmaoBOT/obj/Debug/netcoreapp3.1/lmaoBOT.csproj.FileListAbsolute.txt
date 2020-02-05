@@ -17,3 +17,4 @@
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/LiteDB.dll
+/Users/viko/Documents/GitHub/lmaoBOT2.0/lmaoBOT/lmaoBOT/bin/Debug/netcoreapp3.1/DSharpPlus.VoiceNext.dll
